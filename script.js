@@ -20,7 +20,7 @@ function updateCountdown() {
         document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
         document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
 
-        const monthsText = months === 1 ? 'month' : 'months';
+        const monthsText = months === 1 ? 'month,' : 'months';
         document.getElementById("months-label").innerText = monthsText;
     }
 }
