@@ -14,11 +14,14 @@ function updateCountdown() {
         const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
         document.getElementById("years").innerText = years.toString().padStart(2, '0');
-        document.getElementById("months").innerText = months.toString().padStart(2, '0');
+        document.getElementById("months").innerText = months === 1 ? '01' : months.toString().padStart(2, '0');
         document.getElementById("days").innerText = days.toString().padStart(2, '0');
         document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
         document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
         document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+
+        const monthsText = months === 1 ? 'month' : 'months';
+        document.getElementById("months-label").innerText = monthsText;
     }
 }
 
