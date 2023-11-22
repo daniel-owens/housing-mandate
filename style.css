@@ -18,13 +18,13 @@ body {
 }
 
 h1 {
-    font-size: 36px; /* Increase the font size for the header */
-    margin-bottom: 10px; /* Decrease the space between the header and countdown */
+    font-size: 50px; /* Increase the font size for the header */
+    margin-bottom: 40px; /* Decrease the space between the header and countdown */
     color: #FF10F0; /* Retro yellow color for the header */
 }
 
 .countdown {
-    font-size: 48px; /* Increase the font size for the countdown */
+    font-size: 32px; /* Increase the font size for the countdown */
     font-family: "Digital-7 Mono", sans-serif; /* Retro digital clock font */
     letter-spacing: 5px; /* Adjust the letter spacing for better visibility */
 }
