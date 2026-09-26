@@ -1,38 +1,126 @@
+:root {
+    color-scheme: dark;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #000;
+    min-height: 100vh;
     margin: 0;
-    padding: 0;
-    color: #0f0; /* Retro green color */
+    padding: 36px 24px 20px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    background: #000;
+    color: #00ff00;
+    font-family: Arial, sans-serif;
+    text-align: center;
 }
 
 .content {
-    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
-    padding: 50px 20px;
-    border-radius: 10px; /* Add some rounded corners */
+    width: min(100%, 1500px);
+    margin: auto 0;
+    padding: 32px 0;
 }
 
 h1 {
-    font-size: 50px; /* Increase the font size for the header */
-    margin-bottom: 40px; /* Decrease the space between the header and countdown */
-    color: #FF10F0; /* Retro yellow color for the header */
+    max-width: 1400px;
+    margin: 0 auto 38px;
+    color: #ff10f0;
+    font-size: clamp(2rem, 4.4vw, 3.5rem);
+    line-height: 1.14;
+}
+
+.homes-built {
+    margin: 0 auto 42px;
+}
+
+.homes-built h2 {
+    margin: 0;
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.homes-number {
+    display: block;
+    color: #fff;
+    font-size: clamp(3.3rem, 8vw, 6.5rem);
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+    font-variant-numeric: tabular-nums;
+}
+
+.homes-description {
+    display: block;
+    color: #fff;
+}
+
+.homes-built p {
+    margin: 10px 0 0;
+    color: #bbb;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
 }
 
 .countdown {
-    font-size: 32px; /* Increase the font size for the countdown */
-    font-family: "Digital-7 Mono", sans-serif; /* Retro digital clock font */
-    letter-spacing: 5px; /* Adjust the letter spacing for better visibility */
+    font-family: "Digital-7 Mono", monospace;
+    font-size: clamp(1.05rem, 2.25vw, 2rem);
+    letter-spacing: 0.09em;
+    line-height: 1.65;
 }
 
 .retro-clock {
     display: inline-block;
-    background-color: #000; /* Background color for the clock display */
-    padding: 10px; /* Add some padding to enhance the appearance */
-    border-radius: 5px; /* Add rounded corners to the clock display */
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.8); /* Add a green glow effect */
+    max-width: 100%;
+    padding: 10px 14px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+}
+
+.site-footer {
+    width: min(100%, 1050px);
+    margin: 0 auto;
+    padding-top: 20px;
+    color: #aaa;
+    font-size: 0.76rem;
+    line-height: 1.45;
+}
+
+.site-footer p {
+    margin: 5px 0;
+}
+
+.site-footer a {
+    color: #b5f9b5;
+    text-underline-offset: 2px;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px 16px 16px;
+    }
+
+    .content {
+        padding: 42px 0;
+    }
+
+    h1 {
+        margin-bottom: 32px;
+    }
+
+    .homes-built {
+        margin-bottom: 36px;
+    }
+
+    .retro-clock {
+        padding: 10px;
+    }
 }
