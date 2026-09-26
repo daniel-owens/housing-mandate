@@ -9,84 +9,130 @@
 body {
     min-height: 100vh;
     margin: 0;
-    padding: 36px 24px 20px;
+    padding: 0 24px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    background: #000;
-    color: #00ff00;
-    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at 50% 25%,
+            #1a0b1a 0%,
+            #0b0b0b 45%,
+            #050505 100%);
+    color: #f5f5f2;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 }
 
 .content {
-    width: min(100%, 1500px);
-    margin: auto 0;
-    padding: 32px 0;
+    width: min(100%, 900px);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 72px 0 32px;
+}
+
+.eyebrow,
+.countdown-label {
+    color: #aaaaaa;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+}
+
+.eyebrow {
+    margin: 0 0 22px;
 }
 
 h1 {
-    max-width: 1400px;
-    margin: 0 auto 38px;
-    color: #ff10f0;
-    font-size: clamp(2rem, 4.4vw, 3.5rem);
-    line-height: 1.14;
+    max-width: 850px;
+    margin: 0 auto;
+    color: #ff31db;
+    font-size: clamp(2.5rem, 5.2vw, 3.85rem);
+    line-height: 1.12;
+    letter-spacing: -0.035em;
 }
 
 .homes-built {
-    margin: 0 auto 42px;
+    margin: 54px 0 42px;
+    padding: 31px 16px 35px;
+    border-top: 1px solid #363036;
+    border-bottom: 1px solid #363036;
+}
+
+.stat-intro {
+    margin: 0 0 6px;
+    color: #d9d9d9;
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
 }
 
 .homes-built h2 {
     margin: 0;
-    font-size: clamp(1.2rem, 2.5vw, 2rem);
-    font-weight: 600;
-    line-height: 1.35;
 }
 
 .homes-number {
     display: block;
-    color: #fff;
-    font-size: clamp(3.3rem, 8vw, 6.5rem);
-    line-height: 1.08;
-    letter-spacing: -0.035em;
+    font-size: clamp(4.5rem, 10vw, 6.5rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.055em;
     font-variant-numeric: tabular-nums;
 }
 
 .homes-description {
     display: block;
-    color: #fff;
+    margin-top: 8px;
+    font-size: clamp(1.35rem, 2.8vw, 1.9rem);
 }
 
-.homes-built p {
-    margin: 10px 0 0;
-    color: #bbb;
-    font-size: clamp(0.9rem, 1.5vw, 1rem);
+.stat-period {
+    margin: 15px 0 0;
+    color: #b7b7b7;
+    font-size: 0.95rem;
+    line-height: 1.5;
 }
 
 .countdown {
-    font-family: "Digital-7 Mono", monospace;
-    font-size: clamp(1.05rem, 2.25vw, 2rem);
-    letter-spacing: 0.09em;
-    line-height: 1.65;
+    width: 100%;
+}
+
+.countdown-label {
+    margin: 0 0 14px;
 }
 
 .retro-clock {
-    display: inline-block;
-    max-width: 100%;
-    padding: 10px 14px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    padding: 17px;
+    border: 1px solid #367b36;
+    border-radius: 12px;
+    background: #050805;
+    box-shadow: 0 0 18px rgba(35, 255, 35, 0.16);
+    color: #83ff70;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.time-part {
+    padding: 12px 10px;
+    border: 1px solid #244424;
+    border-radius: 6px;
+    background: #0d160d;
+    font-size: clamp(0.95rem, 1.55vw, 1.12rem);
+    white-space: nowrap;
+}
+
+.time-part span[id] {
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
 }
 
 .site-footer {
-    width: min(100%, 1050px);
-    margin: 0 auto;
-    padding-top: 20px;
-    color: #aaa;
-    font-size: 0.76rem;
-    line-height: 1.45;
+    width: min(100%, 900px);
+    padding: 28px 0 22px;
+    color: #a9a9a9;
+    font-size: 0.78rem;
+    line-height: 1.5;
 }
 
 .site-footer p {
@@ -94,33 +140,33 @@ h1 {
 }
 
 .site-footer a {
-    color: #b5f9b5;
+    color: #b8f7b3;
     text-underline-offset: 2px;
 }
 
 .site-footer a:hover,
 .site-footer a:focus-visible {
-    color: #fff;
+    color: #ffffff;
 }
 
 @media (max-width: 600px) {
     body {
-        padding: 20px 16px 16px;
+        padding: 0 18px;
     }
 
     .content {
-        padding: 42px 0;
-    }
-
-    h1 {
-        margin-bottom: 32px;
+        padding-top: 54px;
     }
 
     .homes-built {
-        margin-bottom: 36px;
+        margin: 42px 0 36px;
     }
 
     .retro-clock {
-        padding: 10px;
+        padding: 12px;
+    }
+
+    .time-part {
+        padding: 10px 8px;
     }
 }

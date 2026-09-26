@@ -3,39 +3,72 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#090909" />
     <title>San Francisco Housing Countdown</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
+
   <body>
     <main class="content">
+      <p class="eyebrow">SAN FRANCISCO HOUSING ELEMENT</p>
+
       <h1>San Francisco Must Plan for 82,069 New Homes by 2031</h1>
 
-      <!-- Update this figure when the next verified SF Planning count is available. -->
       <section class="homes-built" aria-labelledby="homes-built-heading">
+        <p class="stat-intro">San Francisco has added</p>
+
         <h2 id="homes-built-heading">
           <span class="homes-number">6,816</span>
-          <span class="homes-description">net new homes added in 2023–2025</span>
+          <span class="homes-description">net new homes</span>
         </h2>
-        <p>Latest published full-year count, through December 2025.</p>
+
+        <p class="stat-period">
+          From 2023 through 2025 · Latest published full-year count
+        </p>
       </section>
 
-      <div class="countdown">
-        <div id="countdown-timer" class="retro-clock" role="timer" aria-label="Time until the Housing Element period ends">
-          <span id="years">00</span> years,
-          <span id="months">00</span> <span id="months-label">months,</span>
-          <span id="days">00</span> days,
-          <span id="hours">00</span> hours,
-          <span id="minutes">00</span> minutes, and
-          <span id="seconds">00</span> seconds to go
+      <section class="countdown" aria-label="Housing Element countdown">
+        <p class="countdown-label">TIME REMAINING</p>
+
+        <div
+          id="countdown-timer"
+          class="retro-clock"
+          role="timer"
+          aria-label="Time until the Housing Element period ends"
+        >
+          <span class="time-part"><span id="years">00</span> years,</span>
+          <span class="time-part">
+            <span id="months">00</span> <span id="months-label">months,</span>
+          </span>
+          <span class="time-part"><span id="days">00</span> days,</span>
+          <span class="time-part"><span id="hours">00</span> hours,</span>
+          <span class="time-part"><span id="minutes">00</span> minutes, and</span>
+          <span class="time-part"><span id="seconds">00</span> seconds to go</span>
         </div>
-      </div>
+      </section>
     </main>
 
     <footer class="site-footer">
-      <p>Sources: <a href="https://sfplanning.org/project/housing-element-update-2022">SF Planning Housing Element</a> · <a href="https://sfplanning.org/sites/default/files/resources/2026-04/2025_Housing_Inventory.pdf">2025 Housing Inventory, Table 2</a></p>
-      <p>2,544 (2023) + 1,603 (2024) + 2,669 (2025) = 6,816 net new homes. The 2023 annual figure includes January 1–30, before the Housing Element was adopted on January 31.</p>
+      <p>
+        Sources:
+        <a href="https://sfplanning.org/project/housing-element-update-2022">
+          SF Planning Housing Element
+        </a>
+        ·
+        <a
+          href="https://sfplanning.org/sites/default/files/resources/2026-04/2025_Housing_Inventory.pdf"
+        >
+          2025 Housing Inventory, Table 2
+        </a>
+      </p>
+
+      <p>
+        2,544 (2023) + 1,603 (2024) + 2,669 (2025) = 6,816 net new homes.
+        The 2023 annual figure includes January 1–30, before the Housing
+        Element was adopted on January 31.
+      </p>
+
       <p>Last updated September 26, 2026 · Housing data through December 31, 2025</p>
     </footer>
   </body>
