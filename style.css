@@ -344,3 +344,32 @@ h1 {
         text-align: right;
     }
 }
+
+@media (min-width: 601px) {
+    .content {
+        justify-content: flex-start;
+        padding: 24px 0 16px;
+    }
+
+    .eyebrow {
+        margin-bottom: 12px;
+    }
+
+    .homes-built {
+        margin: 24px 0 20px;
+        padding: 18px 16px;
+    }
+
+    .deadline-panel {
+        padding-top: 26px;
+        padding-bottom: 26px;
+    }
+
+    .calendar-time {
+        padding-top: 24px;
+    }
+
+    .panel-footer {
+        margin-top: 24px;
+    }
+}
