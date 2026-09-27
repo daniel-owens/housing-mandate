@@ -63,22 +63,56 @@
       </section>
 
       <section class="countdown" aria-label="Housing Element countdown">
-        <p class="countdown-label">TIME REMAINING</p>
+        <div class="deadline-panel">
+          <div class="panel-heading">
+            <span class="panel-status">
+              <span class="status-light" aria-hidden="true"></span>
+              CLOCK RUNNING
+            </span>
+            <span class="panel-code">SF / HOUSING ELEMENT</span>
+          </div>
 
-        <div
-          id="countdown-timer"
-          class="retro-clock"
-          role="timer"
-          aria-label="Time until the Housing Element period ends"
-        >
-          <span class="time-part"><span id="years">00</span> years,</span>
-          <span class="time-part">
-            <span id="months">00</span> <span id="months-label">months,</span>
-          </span>
-          <span class="time-part"><span id="days">00</span> days,</span>
-          <span class="time-part"><span id="hours">00</span> hours,</span>
-          <span class="time-part"><span id="minutes">00</span> minutes, and</span>
-          <span class="time-part"><span id="seconds">00</span> seconds to go</span>
+          <div
+            id="countdown-timer"
+            role="timer"
+            aria-label="Time remaining until the Housing Element period ends"
+          >
+            <div class="calendar-time">
+              <div class="calendar-unit">
+                <span id="years">00</span>
+                <span class="unit-name" aria-hidden="true">YR</span>
+                <span class="sr-only">years</span>
+              </div>
+              <span class="unit-divider" aria-hidden="true">/</span>
+              <div class="calendar-unit">
+                <span id="months">00</span>
+                <span class="unit-name" aria-hidden="true">MO</span>
+                <span id="months-label" class="sr-only">months,</span>
+              </div>
+              <span class="unit-divider" aria-hidden="true">/</span>
+              <div class="calendar-unit">
+                <span id="days">00</span>
+                <span class="unit-name" aria-hidden="true">DAY</span>
+                <span class="sr-only">days</span>
+              </div>
+            </div>
+
+            <div class="clock-face">
+              <span id="hours">00</span>
+              <span class="clock-colon" aria-hidden="true">:</span>
+              <span id="minutes">00</span>
+              <span class="clock-colon" aria-hidden="true">:</span>
+              <span id="seconds" class="seconds">00</span>
+            </div>
+            <div class="clock-labels" aria-hidden="true">
+              <span>HOURS</span><span>MINUTES</span><span>SECONDS</span>
+            </div>
+          </div>
+
+          <div class="panel-footer">
+            <span>TIME REMAINING</span>
+            <span>ZERO HOUR · FEB 01 2031</span>
+          </div>
         </div>
       </section>
     </main>
